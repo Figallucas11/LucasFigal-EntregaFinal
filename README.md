@@ -1,6 +1,70 @@
 # 🎮 Proyecto Final - Colección de Videojuegos (Lucas Figal)
 
-## 🛠️ Pasos de Configuración
+<p align="center">
+  <a href="#english"><b>English Version</b></a> | 
+  <a href="#español"><b>Versión en Español</b></a>
+</p>
+
+---
+
+<a name="english"></a>
+## 🇺🇸 English Version
+
+### 🛠️ Configuration Steps
+
+This project uses the **Django** framework and an **SQLite** database to manage video game, console, and company data with the following configurations:
+
+1. **Clone the repository.**
+
+2. **Create and activate the virtual environment** (check the `requirements.txt` file if dependencies need to be installed).
+
+3. **Run Migrations:** Ensure the database is up to date with the models.
+
+4. **Create Superuser:** To access the admin panel and manage user data.
+
+5. **Run the local server:**
+
+The project should be available at `http://127.0.0.1:8000/`.
+
+### 💻 App Usage and Functionalities
+
+The project implements a complete **Authentication** and **CRUD** (Create, Read, Update, Delete) system for the three main models.
+
+#### 🗺️ Access Points and Functionalities
+
+| URL Path | View Name | Key Functionality |
+| :--- | :--- | :--- |
+| **`/`** | `views.inicio` | ✅ Main index and navigation links. |
+| **`/usuarios/register/`** | `UserRegistrationView` | ✅ New user creation (Authentication). |
+| **`/games/list/**` | `views.game_list` | ✅ Listing, Search, and Alert Message. |
+| **`/games/add/**` | `views.create_game` | ✅ Record creation (ModelForm). |
+| **`/games/detail/<pk>/`** | `GameDetail` | ✅ Detail and access to edit/delete. |
+| **`/about-me/**` | `views.about_me` | ✅ Static content about the author/project. |
+
+#### 📋 Test Steps (Recommended Testing Order for Demo)
+
+1. **Authentication:**
+    * Register a new user at `/usuarios/register/`.
+    * Log in and log out.
+
+2. **Full CRUD:**
+    * Access `/games/add/` and create a new game, including an image (MEDIA).
+    * Verify that the list updates.
+    * Access the game detail, then **Edit** and **Delete** the record.
+
+3. **Search and Filter:**
+    * Use the search function to filter the game list by title.
+    * Verify that the "alert message" is displayed if there are no results.
+
+4. **Final Verification:**
+    * Access the Django Admin (`http://127.0.0.1:8000/admin/`) to verify that the `Game`, `Console`, and `Company` models are registered and that the `User` model is functional.
+
+---
+
+<a name="español"></a>
+## 🇲🇽 Versión en Español
+
+### 🛠️ Pasos de Configuración
 
 Este proyecto utiliza el framework **Django** y una base de datos **SQLite** para gestionar datos de videojuegos, consolas y empresas, con las siguientes configuraciones:
 
